@@ -19,7 +19,7 @@ RUN cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo \
     -DOPENSSL_SSL_LIBRARY=/usr/local/openssl-1.0/lib/libssl.so \
     -DOPENSSL_CRYPTO_LIBRARY=/usr/local/openssl-1.0/lib/libcrypto.so .
 
-RUN make
+RUN make witness_node cli_wallet delayed_node
 
 RUN mkdir /data_dir
 VOLUME /data_dir
