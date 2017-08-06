@@ -24,6 +24,8 @@ RUN make witness_node cli_wallet delayed_node
 RUN mkdir /data_dir
 VOLUME /data_dir
 
+ADD files/config.ini /data_dir/config.ini
+
 EXPOSE 8090 9090
 
 CMD ["/bitshares/programs/witness_node/witness_node", "--data-dir", "/data_dir"]
